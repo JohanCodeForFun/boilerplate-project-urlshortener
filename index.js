@@ -17,6 +17,9 @@ app.get('/', function(req, res) {
 });
 
 app.post('/api/shorturl', function(req, res) {
+  // create regex to test for, http://www.example.com
+  // if user pass an invalid URL return, { error: 'invalid url' }
+  if (req.body )
   console.log(req.body)
   res.json({"original_url":"https://www.google.com","short_url":1})
 })
