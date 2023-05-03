@@ -17,11 +17,13 @@ app.get('/', function(req, res) {
 });
 
 app.post('/api/shorturl', function(req, res) {
-  // create regex to test for, http://www.example.com
-  // if user pass an invalid URL return, { error: 'invalid url' }
-  if (req.body )
-  console.log(req.body)
-  res.json({"original_url":"https://www.google.com","short_url":1})
+  const urlPattern = /\w{4}:\/\/\w{3}.\w+.com/g;
+  
+  if (urlPattern.test(req.body.url)) {
+    res.json({"original_url":"https://www.google.com","short_url":1})
+  } else {
+    res.json({ error: 'invalid url' });
+  }
 })
 
 app.listen(port, function() {
