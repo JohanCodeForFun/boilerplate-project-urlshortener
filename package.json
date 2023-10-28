@@ -1,20 +1,22 @@
 {
-  "name": "shorturl",
-  "version": "0.0.3",
-  "description": "API project for freeCodeCamp",
+  "name": "boilerplate-project-urlshortener",
+  "version": "1.0.0",
+  "description": "This is the boilerplate code for the URL Shortener Microservice project. Instructions for building your project can be found at https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/url-shortener-microservice.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "pg-promise": "^11.5.4"
   },
-  "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^3.0.1"
   }
 }
